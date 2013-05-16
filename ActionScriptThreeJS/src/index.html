@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ActionScript to ThreeJS Example</title>
+	<script src="lib/randori-guice-framework.js"></script>
+	<script src="lib/randori-framework.js"></script>
+	<script src="lib/three.min.js"></script>
+	<script src="lib/stats.min.js"></script>
+</head>
+<body>
+	<script>
+        var dynamicClassBaseUrl = "jsapp/";
+        var urlRewriter = new guice.loader.URLRewriterBase();
+        var loader = new guice.loader.SynchronousClassLoader(new XMLHttpRequest(), urlRewriter, dynamicClassBaseUrl);
+        var guiceJs = new guice.GuiceJs(loader);
+        var injector = guiceJs.createInjector(new randori.startup.RandoriModule(urlRewriter));
+        var classBuilder = new guice.InjectionClassBuilder(injector, injector.classResolver);
+        var obj = classBuilder.buildClass("ActionScriptThreeJS");
+        obj.start();  
+    </script>
+	</body>
+</html>
