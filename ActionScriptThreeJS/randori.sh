@@ -6,7 +6,7 @@
 # Path to Randori Repos
 repos=/Code/WebRelated/RandoriRepos
 # Randori Compiler Path
-rc=$repos/randori-compiler-0.2.4.2
+rc=$repos/randori-compiler-latest
 # Randori Libraries SWC
 rlswc=$repos/randori-libraries/bin/randori-libraries.swc
 # sdk-path
