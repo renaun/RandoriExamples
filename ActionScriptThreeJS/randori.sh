@@ -17,7 +17,9 @@ rsdk=$repos/randori-sdk/
 # Source File Base Path
 source=./
 # Output folder
-output=./jsapp
+output=../js-randori
 
+# Change into the source folder because of bug
+cd src/
 # Run Randoir Compiler:
-java -jar $rc/randori.jar randori.compiler.clients.Randori -sdk-path=$rsdk -library-path $rswc/builtin.swc -library-path $rlswc -source-path $source -js-classes-as-files=true -output $output
+java -jar $rc/randori.jar randori.compiler.clients.Randori -sdk-path=$rsdk -library-path $rswc/builtin.swc -library-path $rswc/randori-guice-framework.swc -library-path $rlswc -source-path $source -js-classes-as-files=true -output $output

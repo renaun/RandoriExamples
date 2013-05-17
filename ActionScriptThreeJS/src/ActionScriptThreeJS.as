@@ -30,7 +30,7 @@ import randori.webkit.page.Window;
 import utils.RequestAnimationFrame;
 
 public class ActionScriptThreeJS
-{
+{	
 	protected var container:Element;
 	protected var stats:Stats;
 	
@@ -49,13 +49,11 @@ public class ActionScriptThreeJS
 	protected var windowHalfX:Number = window.innerWidth / 2;
 	protected var windowHalfY:Number = window.innerHeight / 2;
 	
+	[Inject]
 	public var animation:RequestAnimationFrame;
 	
-	public function start():void
-	{
-		// Create instance ENTER_FRAME-like helper class JS style
-		animation = new RequestAnimationFrame();
-		
+	public function main():void
+	{		
 		container = new HTMLDivElement();
 		window.document.body.appendChild(container);
 		
@@ -74,7 +72,7 @@ public class ActionScriptThreeJS
 		scene = new Scene();
 		
 		// FLOOR
-		var floorTexture:Texture = ImageUtils.loadTexture("../images/checkerboard.jpg");
+		var floorTexture:Texture = ImageUtils.loadTexture("images/checkerboard.jpg");
 		floorTexture.wrapS = floorTexture.wrapT = Three.RepeatWrapping; 
 		floorTexture.repeat.set(5, 5);
 		var floorMaterial:MeshBasicMaterial = new MeshBasicMaterial({ map: floorTexture, side: Three.DoubleSide });
