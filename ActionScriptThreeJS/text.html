@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ActionScript to ThreeJS Example</title>
+	<script src="js/three.min.js"></script>
+	<script src="js/stats.min.js"></script>
+	<script src="js-randori/randori-guice-framework.js"></script>
+    <script src="js-randori/GuiceInjectorBootstrap.js"></script>
+</head>
+<body>
+	<script>
+        onload = function() {
+            var bootstrap = new GuiceInjectorBootstrap( "CreateTextTexture", "js-randori/" );
+            bootstrap.launch();
+        }
+    </script>
+</body>
+</html>
