@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HungryHeroJS using KontikiJS and RandoriJS</title>
+	<script src="js-randori/randori-guice-framework.js"></script>
+    <script src="js-randori/GuiceInjectorBootstrap.js"></script>
+</head>
+<body>
+	<script>
+        onload = function() {
+            var bootstrap = new GuiceInjectorBootstrap( "HungryHero", "js-randori/" );
+            bootstrap.launch("#0000cc", 1024, 768, 60);
+        }
+    </script>
+    
+    <!--<textarea rows="20" cols="50" id="logger">-->
+</textarea>
+</body>
+</html>
